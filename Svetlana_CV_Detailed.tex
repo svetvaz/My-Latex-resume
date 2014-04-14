@@ -1,0 +1,95 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass{res} 
+
+
+\usepackage{amsmath}
+\usepackage{easylist}
+\usepackage{amssymb}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\hypersetup{urlbordercolor={white},pagebordercolor={white},pdfnewwindow=true}
+
+%\usepackage[margin=1in,height=20in]{geometry}
+%citebordercolor [rgb 0 1 0]
+%filebordercolor [rgb 0 .5 .5]
+%linkbordercolor [rgb 1 0 0]
+%menubordercolor [rgb 1 0 0]
+%urlbordercolor [rgb 0 1 1]
+%runbordercolor [rgb 0 .7 .7]
+%allbordercolors
+
+\usepackage{times}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\setlength{\headsep}{24pt}  % space between header and text
+\setlength{\headheight}{24pt} % allow room for 2-line header
+
+
+%\pagestyle{fancy}     % set pagestyle for document
+\rhead{ {\it S. Vaz}\\{\it p. \thepage\  of~\pageref{LastPage}} } % put text in header (right side)
+\cfoot{}                                     % the foot is empty
+
+
+
+\newcommand{\gtxt }[1]{{\color{blue} {#1}}} 
+\newtoggle{detailedVersion}
+% If we want a detailed resume with individual languages used in each project and so on, toggle this flag true.
+%\toggletrue{detailedVersion}
+\toggletrue{detailedVersion}
+
+\iftoggle{detailedVersion}{
+\topmargin=-0.5in % start text higher on the page
+}{\topmargin=-10in}
+
+\begin{document}
+\thispagestyle{empty} % this page has no header
+\name{\LARGE{SVETLANA VAZ}\\[8pt]}  % the \\[12pt] adds a blank line after name
+\address{{}\href{tel:14083065221}{+1(408)~306-5221} or  \href{tel:2133421679}{+1(213)~342-1679}\\
+\url{http://linkedin.com/in/svetvaz}
+%\href{mailto:svetvaz@gmail.com}{svetvaz@gmail.com}
+}
+\address{{}Sunnyvale, CA 94085\\
+ \href{mailto:svetvaz@gmail.com}{svetvaz@gmail.com}}
+
+
+\begin{resume}
+
+%\iftoggle{detailedVersion}{
+%\address{{}1055 Escalon Ave \\ Sunnyvale, CA 94085\\
+%  \href{mailto:svetvaz@gmail.com}{svetvaz@gmail.com}}
+%}{}
+% ---- Resume begins here ----
+
+\input{resume_content}
+
+ \vspace{0.2in}
+%\iftoggle{detailedVersion}{
+
+\iftoggle{detailedVersion}{
+\bibliographystyle{svetlanavaz}
+\vspace{15pt}
+\begingroup
+\renewcommand{\section}[2]{}%
+{\def\section*#1{}\bibliography{svetlana_vaz}}
+\endgroup
+}
+
+
+ \iftoggle{detailedVersion}{
+ \vspace{0.2in}
+ \section{\centerline{REFERENCES}}
+ \vspace{8pt}
+ \begin{center}
+ References provided upon request. (Online references available at \href{http://linkedin.com/in/svetvaz}{LinkedIn}).
+ \end{center}}{}
+
+\end{resume} 
+\end{document}
