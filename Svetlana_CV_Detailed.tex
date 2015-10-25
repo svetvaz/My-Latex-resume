@@ -29,8 +29,8 @@
 \usepackage{fancyhdr}  % use this package to get a 2 line header
 \renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
 \setlength{\headheight}{24pt} % allow room for 2-line header
-\setlength{\headsep}{24pt}  % space between header and text
-\setlength{\headheight}{24pt} % allow room for 2-line header
+\setlength{\headsep}{10pt}  % space between header and text
+\setlength{\headheight}{10pt} % allow room for 2-line header
 
 
 %\pagestyle{fancy}     % set pagestyle for document
@@ -47,16 +47,17 @@
 
 \iftoggle{detailedVersion}{
 \topmargin=-0.5in % start text higher on the page
-}{\topmargin=-10in}
+}{\topmargin=-3in}
 
 \begin{document}
 \thispagestyle{empty} % this page has no header
-\name{\LARGE{SVETLANA VAZ}\\[8pt]}  % the \\[12pt] adds a blank line after name
-\address{{}\href{tel:213-422-6330}{+1(213)~422-6330} or  \href{tel:2133421679}{+1(213)~342-1679}\\
-\url{http://linkedin.com/in/svetvaz}
+\name{\LARGE{SVETLANA VAZ}\\[4pt]}  % the \\[12pt] adds a blank line after name
+\address{{}\href{tel:213-422-6330}{+1(213)~422-6330} /  \href{tel:2133421679}{+1(213)~342-1679}\\
+\url{http://linkedin.com/in/svetvaz}\\
+\url{www.svetlanavaz.asuscomm.com}
 %\href{mailto:svetvaz@gmail.com}{svetvaz@gmail.com}
 }
-\address{{}Sunnyvale, CA 94085\\
+\address{{}Milpitas, CA 95035\\
  \href{mailto:svetvaz@gmail.com}{svetvaz@gmail.com}}
 
 
@@ -70,7 +71,7 @@
 
 \input{resume_content}
 
- \vspace{0.2in}
+ \vspace{0.1in}
 %\iftoggle{detailedVersion}{
 
 \iftoggle{detailedVersion}{
